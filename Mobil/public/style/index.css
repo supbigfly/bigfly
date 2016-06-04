@@ -1,0 +1,39 @@
+body{
+	margin: 0;
+	background-color: #2E8B57;
+}
+.ani_hone{
+	font-size: 0.4rem;
+	text-align: center;
+	line-height: 0.3rem;
+}
+.ani_htwo{
+	font-size: 0.35rem;
+	line-height: 0.4rem;
+}
+.ani_hthree{
+	font-size: 0.3rem;
+	line-height: 0.5rem;
+}
+.swiper-slide.page1 h1,
+.swiper-slide.page1 h2,
+.swiper-slide.page1 h3{
+	padding:0rem 0.1rem;
+}
+.swiper-slide.page2{
+	width: 100%;
+	height: 100%;
+	padding-bottom: 100%;
+}
+.swiper-slide.page3{
+	background-repeat: repeat-y;
+	font-size: 0.3rem;
+}
+/*#items{
+	font-size: 0.2rem;
+}*/
+.swiper-slide{
+	color:white;
+	width: 100%;
+	height: 100%;
+}

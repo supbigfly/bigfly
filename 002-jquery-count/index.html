@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jquery加减</title>
+  <style>
+    body{
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <p>数量<span id="text">0</span></p>
+  <button id="jia">+</button>
+  <button id="jian">-</button>
+  <script src="jQuery.js"></script>
+  <script type="text/javascript">
+    $('#jia').on('click',function(){
+      var contenter = $('#text');
+      var content = parseInt(contenter.text());
+      contenter.text(content+1);
+    })
+    $('#jian').on('click',function(){
+      var contenter = $('#text');
+      var content = parseInt(contenter.text());
+      contenter.text(content-1);
+    })
+
+  </script>
+</body>
+</html>

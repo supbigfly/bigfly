@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+<body>
+
+  <div id="container"></div>
+  <p>代码日后变得更加易读，更加好维护。1。组件中的状态变化都被抽象成了这样的数据，任何时候我们想知道这个组件处于什么状态，只需要查询相应的state变量值就行。是有唯一的可以确定状态的源头，2.react组件化带来的导致每一个组件或者说每一个文件都不是很大，同时相应的js代码和html代码是紧挨着的，时间长了再回来看很容易找到执行的代码，使得代码的阅读变得非常简单。3.通过抽取state值或者通过父组件传递来的属性值，react组件其实是实现了最终显示的界面效果底层数据的这样的一种分离。换句话说一个react组件的作用就是把组件底层对应的不断变化的数据随时的翻译成页面上对应的我们可以看到的小页面组件这种分离也是让代码结构变得非常的的清晰和简单。而jQuery上手简单到了后来容易乱。</p>
+  <script src="js/react.js"></script>
+  <script src="js/react-dom.js"></script>
+  <script src="js/browser.min.js"></script>
+  <script type="text/babel">
+    var Counter = React.createClass({
+      //设置初始值
+      getInitialState:function(){
+        return{
+          count:0
+        };
+      },
+      add:function(){
+        //要修改state的值，使用setState接口
+        this.setState({
+          count:this.state.count+1
+        })
+      },
+      subtrack:function(){
+        //要修改state的值，使用setState接口
+        this.setState({
+          count:this.state.count-1
+        })
+      },
+      //这里加入逗号保证两个函数正确的隔开
+      //this.state.count把当前数据当做state值来存储
+      render:function(){
+        return(
+          <div>
+            <p>数量{this.state.count}</p>
+
+            <button onClick={this.add}>+</button>
+            <button onClick={this.subtrack}>-</button>
+          </div>
+        );
+      }
+    });
+    ReactDOM.render(<Counter />, document.getElementById('container'));
+  </script>
+</body>
+</html>
